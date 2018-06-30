@@ -337,7 +337,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     fun googleApi() {
         val visionBuilder = Vision.Builder(NetHttpTransport(), AndroidJsonFactory(), null)
-        visionBuilder.setVisionRequestInitializer(VisionRequestInitializer("AIzaSyBlQm5S9O_fV0p8s5juH_yIc02jM2DDO7s"))
+        visionBuilder.setVisionRequestInitializer(VisionRequestInitializer("your google cloud vision service key"))
         val vision = visionBuilder.build()
 
         // Create new thread
