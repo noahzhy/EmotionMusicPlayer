@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/joy_ll"
+            android:onClick="joy"
+            android:background="?selectableItemBackgroundBorderless
+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/tagerEmotion_joy_iv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/joy"/>
+
+            <TextView
+                android:id="@+id/tagerEmotion_joy_tv"
+                android:layout_width="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Joy"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calm_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/joy_ll">
+
+            <ImageView
+                android:id="@+id/tagerEmotion_calm_iv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/calm"/>
+
+            <TextView
+                android:id="@+id/tagerEmotion_calm_tv"
+                android:layout_width="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Calm"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_ll"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/anger_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@+id/joy_ll">
+
+            <ImageView
+                android:id="@+id/tagerEmotion_anger_iv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/anger"/>
+
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Anger"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sorrow_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/anger_ll"
+            android:layout_below="@+id/calm_ll">
+
+            <ImageView
+                android:id="@+id/tagerEmotion_sorrow_iv"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/sorrow"/>
+
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sorrow"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

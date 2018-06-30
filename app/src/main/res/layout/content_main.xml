@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:navigationIcon="@drawable/ic_menu_black_24dp"
+        app:title="Emotion Music Player">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="24dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/black"
+            android:text="0:00"/>
+
+        <TextView
+            android:id="@+id/time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:text="0:00"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/facescan_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:clipToPadding="false"
+        android:layout_centerHorizontal="true">
+
+        <com.wonderkiln.camerakit.CameraView
+            android:id="@+id/cameraView"
+            android:layout_width="@dimen/valuesOfFaceScan"
+            android:layout_height="@dimen/valuesOfFaceScan"
+            app:ckFocus="continuous"
+            app:ckFacing="front"
+            app:ckPermissions="lazy"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/roundImage"
+            android:layout_width="@dimen/valuesOfFaceScan"
+            android:layout_height="@dimen/valuesOfFaceScan"
+            android:padding="56dp"
+            android:tint="@color/colorAccent"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_hourglass_empty_black_48dp"/>
+
+        <ImageView
+            android:id="@+id/roundbg"
+            android:layout_width="@dimen/valuesOfFaceScan"
+            android:layout_height="@dimen/valuesOfFaceScan"
+            android:src="@drawable/roundshape"
+            android:layout_centerHorizontal="true"/>
+
+        <kr.ac.hanyang.emotionmusicplayer.LoadingButton
+            android:id="@+id/loadingbutton"
+            android:layout_width="208dp"
+            android:layout_height="208dp"
+            android:layout_marginTop="-4dp"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"/>
+
+        <kr.ac.hanyang.emotionmusic.RoundImageView
+            android:id="@+id/round_iv"
+            android:layout_width="@dimen/valuesOfFaceScan"
+            android:layout_height="@dimen/valuesOfFaceScan"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onepx"
+            android:layout_centerHorizontal="true"/>
+
+        <kr.ac.hanyang.emotionmusic.RoundImageView
+            android:id="@+id/round_cover"
+            android:layout_width="@dimen/valuesOfFaceScan"
+            android:layout_height="@dimen/valuesOfFaceScan"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tips3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="32dp"
+            android:text="Press the smile emotion to"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loadingbutton"/>
+
+        <TextView
+            android:id="@+id/tips4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textSize="16sp"
+            android:text="scan your face"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tips"/>
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="32dp"
+            android:text="Press the smile emotion to"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loadingbutton"/>
+
+        <TextView
+            android:id="@+id/tips2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="scan your face"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tips"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/facescan_sv"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/musicPlayerCtrl_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="78dp"
+                android:paddingLeft="72dp"
+                android:paddingRight="72dp"
+                android:layout_weight="1"
+                android:layout_alignTop="@+id/musicPlayerCtrl_llt"
+                android:src="@drawable/facebackground"/>
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="72dp"
+                android:padding="16dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:layout_alignTop="@+id/musicPlayerCtrl_ll"
+                android:src="@drawable/facebackground"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/musicPlayerCtrl_llt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/facescan_sv"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/faceType_iv"
+                android:layout_width="@dimen/valuesOfMusicPlayerCtrl"
+                android:layout_height="@dimen/valuesOfMusicPlayerCtrl"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_weight="1"
+                android:src="@drawable/ic_tag_faces_black_24dp"/>
+
+            <ImageView
+                android:id="@+id/playOrNot_iv"
+                android:layout_width="@dimen/valuesOfMusicPlayerCtrl"
+                android:layout_height="@dimen/valuesOfMusicPlayerCtrl"
+                android:padding="4dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_arrow_black_24dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottom_iv"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"/>
+
+</RelativeLayout>

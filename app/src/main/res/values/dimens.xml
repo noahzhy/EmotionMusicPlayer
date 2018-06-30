@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="valuesOfMusicPlayerCtrl">44dp</dimen>
+    <dimen name="valuesOfFaceScan">200dp</dimen>
+
+</resources>
